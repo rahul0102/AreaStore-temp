@@ -25,7 +25,7 @@ app.use('/',UserController);
 
 //error handling middleware
 app.use(function(err,req,res,next){
-  //console.log(err);
+  console.log(err);
   res.status(500).send({Error:err.message});
 });
 
