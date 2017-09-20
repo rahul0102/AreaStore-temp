@@ -5,7 +5,7 @@ const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 const port = process.env.PORT || 4000;
 const SellerController=require('./controllers/sellerController');
-
+const userController=require('./controllers/userController');
 
 //setting express app
 const app=express();
@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 
 //using SellerController
 app.use('/sellers',SellerController);
-
+app.use('/',UserController);
 
 //error handling middleware
 app.use(function(err,req,res,next){
